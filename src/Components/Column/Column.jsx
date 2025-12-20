@@ -7,7 +7,7 @@ const Column = ({ title, children }) => {
       <div className="column__title">
         <p>{title}</p>
       </div>
-      <div className="cards">
+      <div className="card">
         {children}
       </div>
     </div>

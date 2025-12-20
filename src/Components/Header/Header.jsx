@@ -23,15 +23,15 @@ const Header = () => {
               <a href="#popNewCard">Создать новую задачу</a>
             </button>
             <a href="#user-set-target" className="header__user _hover02">
-              Ivan Ivanov
+              Барабанов Виталий
             </a>
             <div
               className="header__pop-user-set pop-user-set"
               id="user-set-target"
             >
               <a href="">x</a>
-              <p className="pop-user-set__name">Ivan Ivanov</p>
-              <p className="pop-user-set__mail">ivan.ivanov@gmail.com</p>
+              <p className="pop-user-set__name">Барабанов Виталий</p>
+              <p className="pop-user-set__mail">Barabanov_Witalii@gmail.com</p>
               <div className="pop-user-set__theme">
                 <p>Темная тема</p>
                 <input type="checkbox" className="checkbox" name="checkbox" />
