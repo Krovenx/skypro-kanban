@@ -1,7 +1,6 @@
 import React from "react";
-import "./PopUser.scss";
-import "./Header.scss";
-
+import "./PopUser.css";
+import "./Header.css";
 
 const Header = () => {
   return (

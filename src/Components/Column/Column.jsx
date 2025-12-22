@@ -1,5 +1,5 @@
-import React from 'react';
-import './Column.scss';
+import React from "react";
+import "./Column.css";
 
 const Column = ({ title, children }) => {
   return (
@@ -7,9 +7,7 @@ const Column = ({ title, children }) => {
       <div className="column__title">
         <p>{title}</p>
       </div>
-      <div className="card">
-        {children}
-      </div>
+      <div className="card">{children}</div>
     </div>
   );
 };

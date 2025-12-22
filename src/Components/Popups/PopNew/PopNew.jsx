@@ -1,5 +1,5 @@
 import React from "react";
-import "./PopNew.scss";
+import "./PopNew.css";
 const PopNew = () => {
   return (
     <div className="pop-new-card" id="popNewCard">

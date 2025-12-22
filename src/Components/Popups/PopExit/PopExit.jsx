@@ -1,5 +1,5 @@
-import React from 'react';
-import './PopExit.scss';
+import React from "react";
+import "./PopExit.css";
 
 const PopExit = () => {
   return (

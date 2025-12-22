@@ -6,6 +6,7 @@
 .header__user:hover {
   color: #33399b;
 }
+
 ._hover02:hover::after,
 .header__user:hover::after {
   border-left-color: #33399b;
@@ -16,6 +17,7 @@
   background-color: #33399b;
   color: #ffffff;
 }
+
 ._hover03:hover a {
   color: #ffffff;
 }
@@ -24,8 +26,8 @@
   width: 100%;
   margin: 0 auto;
   background-color: #ffffff;
-
-&__block {
+}
+.header__block {
   height: 70px;
   display: flex;
   flex-wrap: nowrap;
@@ -36,17 +38,17 @@
   left: 0;
   padding: 0 10px;
 }
-&__logo img {
+.header__logo img {
   width: 85px;
 }
-&__nav {
+.header__nav {
   max-width: 290px;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-&__btn-main-new {
+.header__btn-main-new {
   width: 178px;
   height: 30px;
   border-radius: 4px;
@@ -58,10 +60,10 @@
   font-weight: 500;
   margin-right: 20px;
 }
-&__btn-main-new a {
+.header__btn-main-new a {
   color: #ffffff;
 }
-&__user {
+.header__user {
   height: 20px;
   display: flex;
   flex-wrap: nowrap;
@@ -71,7 +73,7 @@
   line-height: 20px;
   color: #565eef;
 }
-&__user::after {
+.header__user::after {
   content: "";
   display: block;
   width: 6px;
@@ -83,7 +85,7 @@
   margin: -6px 0 0 5px;
   padding: 0;
 }
-&__pop-user-set {
+.header__pop-user-set {
   display: none;
   position: absolute;
   top: 61px;
@@ -95,5 +97,4 @@
   padding: 34px;
   text-align: center;
   z-index: 2;
-}
 }

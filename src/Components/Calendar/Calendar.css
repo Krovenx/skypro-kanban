@@ -1,32 +1,32 @@
 .calendar {
   width: 182px;
   margin-bottom: 20px;
-
-.calendar__ttl {
+}
+.calendar .calendar__ttl {
   margin-bottom: 14px;
   padding: 0 7px;
 }
-.calendar__p {
+.calendar .calendar__p {
   color: #94a6be;
   font-size: 10px;
   line-height: 1;
 }
-.calendar__p span {
+.calendar .calendar__p span {
   color: #000000;
 }
-.calendar__block {
+.calendar .calendar__block {
   display: block;
 }
-.calendar__month {
+.calendar .calendar__month {
   color: #94a6be;
   font-size: 14px;
   line-height: 25px;
   font-weight: 600;
 }
-.calendar__content {
+.calendar .calendar__content {
   margin-bottom: 12px;
 }
-.calendar__days-names {
+.calendar .calendar__days-names {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -34,20 +34,20 @@
   margin: 7px 0;
   padding: 0 7px;
 }
-.calendar__day-name {
+.calendar .calendar__day-name {
   color: #94a6be;
   font-size: 10px;
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.2px;
 }
-.calendar__cells {
+.calendar .calendar__cells {
   width: 182px;
   height: 126px;
   display: flex;
   flex-wrap: wrap;
 }
-.calendar__cell {
+.calendar .calendar__cell {
   width: 22px;
   height: 22px;
   margin: 2px;
@@ -62,7 +62,7 @@
   letter-spacing: -0.2px;
   cursor: pointer;
 }
-.calendar__nav {
+.calendar .calendar__nav {
   width: 100%;
   display: flex;
   align-items: center;
@@ -70,7 +70,6 @@
   margin-top: 14px;
   padding: 0 7px;
 }
-.calendar__period {
+.calendar .calendar__period {
   padding: 0 7px;
-}
 }
