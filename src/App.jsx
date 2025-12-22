@@ -1,35 +1,106 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import "./App.css";
+import Header from "./Components/Header/Header";
+import Main from "./Components/Main/Main";
+import Column from "./Components/Column/Column";
+import Card from "./Components/Card/Card";
+import PopExit from "./Components/Popups/PopExit/PopExit";
+import PopNew from "./Components/Popups/PopNew/PopNew";
+import PopBrowse from "./Components/Popups/PopBrowse/PopBrowse";
+import Wrapper from "./Components/Wrapper/Wrapper";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Wrapper>
+      <PopExit />
+      <PopNew />
+      <PopBrowse />
+      <Header />
+
+      <Main>
+        <Column title="Без статуса">
+          <Card
+            themeColor="_orange"
+            themeName="Web Design"
+            title="Название задачи"
+            date="30.10.23"
+          />
+          <Card
+            themeColor="_green"
+            themeName="Research"
+            title="Название задачи"
+            date="30.10.23"
+          />
+          <Card
+            themeColor="_orange"
+            themeName="Web Design"
+            title="Название задачи"
+            date="30.10.23"
+          />
+          <Card
+            themeColor="_purple"
+            themeName="Copywriting"
+            title="Название задачи"
+            date="30.10.23"
+          />
+          <Card
+            themeColor="_orange"
+            themeName="Web Design"
+            title="Название задачи"
+            date="30.10.23"
+          />
+        </Column>
+
+        <Column title="Нужно сделать">
+          <Card
+            themeColor="_green"
+            themeName="Research"
+            title="Название задачи"
+            date="30.10.23"
+          />
+        </Column>
+
+        <Column title="В работе">
+          <Card
+            themeColor="_green"
+            themeName="Research"
+            title="Название задачи"
+            date="30.10.23"
+          />
+          <Card
+            themeColor="_purple"
+            themeName="Copywriting"
+            title="Название задачи"
+            date="30.10.23"
+          />
+          <Card
+            themeColor="_orange"
+            themeName="Web Design"
+            title="Название задачи"
+            date="30.10.23"
+          />
+        </Column>
+
+        <Column title="Тестирование">
+          <Card
+            themeColor="_green"
+            themeName="Research"
+            title="Название задачи"
+            date="30.10.23"
+          />
+        </Column>
+
+        <Column title="Готово">
+          <Card
+            themeColor="_green"
+            themeName="Research"
+            title="Название задачи"
+            date="30.10.23"
+          />
+        </Column>
+      </Main>
+    </Wrapper>
+  );
 }
 
-export default App
+export default App;
