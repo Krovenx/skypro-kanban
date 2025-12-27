@@ -1,0 +1,42 @@
+export const cardList = [
+  {
+    id: 1,
+    themeColor: "_orange",
+    themeName: "Web Design",
+    title: "Название задачи",
+    date: "30.10.23",
+    status: "Без статуса",
+  },
+  {
+    id: 2,
+    themeColor: "_green",
+    themeName: "Research",
+    title: "Название задачи",
+    date: "30.10.23",
+    status: "Нужно сделать",
+  },
+  {
+    id: 3,
+    themeColor: "_orange",
+    themeName: "Web Design",
+    title: "Название задачи",
+    date: "30.10.23",
+    status: "В работе",
+  },
+  {
+    id: 4,
+    themeColor: "_purple",
+    themeName: "Copywriting",
+    title: "Название задачи",
+    date: "30.10.23",
+    status: "Тестирование",
+  },
+  {
+    id: 5,
+    themeColor: "_orange",
+    themeName: "Web Design",
+    title: "Название задачи",
+    date: "30.10.23",
+    status: "Готово",
+  },
+];

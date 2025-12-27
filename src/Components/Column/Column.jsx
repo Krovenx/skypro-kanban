@@ -1,11 +1,11 @@
 import React from "react";
 import "./Column.css";
 
-const Column = ({ title, children }) => {
+const Column = ({ children, status }) => {
   return (
     <div className="main__column">
       <div className="column__title">
-        <p>{title}</p>
+        <p>{status}</p>
       </div>
       <div className="card">{children}</div>
     </div>
