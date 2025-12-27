@@ -2,7 +2,12 @@ import React from "react";
 import "./PopUser.css";
 import "./Header.css";
 
-const Header = () => {
+//////////////////////////////////////////////////////////
+
+const Header = ({ popUser, setPopUser }) => {
+  const openPop = () => {
+    setPopUser(!popUser);
+  };
   return (
     <header className="header">
       <div className="container">
@@ -21,12 +26,19 @@ const Header = () => {
             <button className="header__btn-main-new _hover01" id="btnMainNew">
               <a href="#popNewCard">Создать новую задачу</a>
             </button>
-            <a href="#user-set-target" className="header__user _hover02">
+            <div className="header__user _hover02" onClick={openPop}>
               Барабанов Виталий
-            </a>
+            </div>
             <div
-              className="header__pop-user-set pop-user-set"
+              className={`header__pop-user-set pop-user-set ${
+                popUser ? "active" : ""
+              }`}
               id="user-set-target"
+              onClick={openPop}
+              style={{
+                opacity: popUser ? 1 : 0,
+                visibility: popUser ? "visible" : "hidden",
+              }}
             >
               <a href="">x</a>
               <p className="pop-user-set__name">Барабанов Виталий</p>

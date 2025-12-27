@@ -5,6 +5,7 @@
 ._hover02:hover,
 .header__user:hover {
   color: #33399b;
+  cursor: pointer;
 }
 
 ._hover02:hover::after,
@@ -86,7 +87,7 @@
   padding: 0;
 }
 .header__pop-user-set {
-  display: none;
+  display: block;
   position: absolute;
   top: 61px;
   right: 0;

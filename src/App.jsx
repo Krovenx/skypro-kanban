@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
@@ -10,12 +10,14 @@ import PopBrowse from "./Components/Popups/PopBrowse/PopBrowse";
 import Wrapper from "./Components/Wrapper/Wrapper";
 
 function App() {
+  const [popUser, setPopUser] = useState(false);
+
   return (
     <Wrapper>
       <PopExit />
       <PopNew />
       <PopBrowse />
-      <Header />
+      <Header popUser={popUser} setPopUser={setPopUser} />
 
       <Main>
         <Column title="Без статуса">
