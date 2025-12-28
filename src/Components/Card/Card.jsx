@@ -1,13 +1,13 @@
 import React from "react";
 import "./Card.css";
 
-const Card = ({ themeColor, themeName, title, date }) => {
+const Card = ({ item}) => {
   return (
     <div className="card__item">
       <div className="card__card card">
         <div className="card__group">
-          <div className={`card__theme ${themeColor}`}>
-            <p className={themeColor}>{themeName}</p>
+          <div className={`card__theme ${item.themeColor}`}>
+            <p className={item.themeColor}>{item.themeName}</p>
           </div>
           <a href="#popBrowse" target="_self">
             <div className="card__btn">
@@ -19,7 +19,7 @@ const Card = ({ themeColor, themeName, title, date }) => {
         </div>
         <div className="card__content">
           <a href="" target="_blank">
-            <h3 className="card__title">{title}</h3>
+            <h3 className="card__title">{item.title}</h3>
           </a>
           <div className="card__date">
             <svg
@@ -50,7 +50,7 @@ const Card = ({ themeColor, themeName, title, date }) => {
                 </clipPath>
               </defs>
             </svg>
-            <p>{date}</p>
+            <p>{item.date}</p>
           </div>
         </div>
       </div>
