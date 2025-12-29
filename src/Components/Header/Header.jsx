@@ -27,7 +27,7 @@ const Header = ({ popUser, setPopUser }) => {
               <a href="#popNewCard">Создать новую задачу</a>
             </button>
             <div className="header__user _hover02" onClick={openPop}>
-              Барабанов Виталий
+              Ivan Ivanov
             </div>
             <div
               className={`header__pop-user-set pop-user-set ${
@@ -40,9 +40,8 @@ const Header = ({ popUser, setPopUser }) => {
                 visibility: popUser ? "visible" : "hidden",
               }}
             >
-              <a href="">x</a>
-              <p className="pop-user-set__name">Барабанов Виталий</p>
-              <p className="pop-user-set__mail">Barabanov_Witalii@gmail.com</p>
+              <p className="pop-user-set__name">Ivan Ivanov</p>
+              <p className="pop-user-set__mail">Ivan Ivanov@gmail.com</p>
               <div className="pop-user-set__theme">
                 <p>Темная тема</p>
                 <input type="checkbox" className="checkbox" name="checkbox" />

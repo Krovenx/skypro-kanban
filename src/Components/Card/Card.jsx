@@ -19,7 +19,7 @@ const Card = ({ item}) => {
         </div>
         <div className="card__content">
           <a href="" target="_blank">
-            <h3 className="card__title">{item.title}</h3>
+            <h3 className={`card__title ${item.id === 11 ? 'line-through' : ''}`}>{item.title}</h3>
           </a>
           <div className="card__date">
             <svg

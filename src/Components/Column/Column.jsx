@@ -4,7 +4,7 @@ import { cardList } from "../../data";
 import Card from "../Card/Card";
 import CardLoader from "../Loadering/CardLoader";
 
-const Column = ({ loading, title }) => {
+const Column = ({ title }) => {
   return (
     <div className="main__column">
       <div className="column__title">
@@ -13,13 +13,9 @@ const Column = ({ loading, title }) => {
       <div className="card">
         {cardList
           .filter((item) => item.status === title)
-          .map((item, i) =>
-            loading ? (
-              <CardLoader key={i} />
-            ) : (
-              <Card item={item} key={item.id} />
-            )
-          )}
+          .map((item) => (
+            <Card item={item} key={item.id} />
+          ))}
       </div>
     </div>
   );
