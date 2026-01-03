@@ -2,7 +2,12 @@ import React from "react";
 import "./PopUser.css";
 import "./Header.css";
 
-const Header = () => {
+//////////////////////////////////////////////////////////
+
+const Header = ({ popUser, setPopUser }) => {
+  const openPop = () => {
+    setPopUser(!popUser);
+  };
   return (
     <header className="header">
       <div className="container">
@@ -21,16 +26,22 @@ const Header = () => {
             <button className="header__btn-main-new _hover01" id="btnMainNew">
               <a href="#popNewCard">Создать новую задачу</a>
             </button>
-            <a href="#user-set-target" className="header__user _hover02">
-              Барабанов Виталий
-            </a>
+            <div className="header__user _hover02" onClick={openPop}>
+              Ivan Ivanov
+            </div>
             <div
-              className="header__pop-user-set pop-user-set"
+              className={`header__pop-user-set pop-user-set ${
+                popUser ? "active" : ""
+              }`}
               id="user-set-target"
+              onClick={openPop}
+              style={{
+                opacity: popUser ? 1 : 0,
+                visibility: popUser ? "visible" : "hidden",
+              }}
             >
-              <a href="">x</a>
-              <p className="pop-user-set__name">Барабанов Виталий</p>
-              <p className="pop-user-set__mail">Barabanov_Witalii@gmail.com</p>
+              <p className="pop-user-set__name">Ivan Ivanov</p>
+              <p className="pop-user-set__mail">Ivan Ivanov@gmail.com</p>
               <div className="pop-user-set__theme">
                 <p>Темная тема</p>
                 <input type="checkbox" className="checkbox" name="checkbox" />

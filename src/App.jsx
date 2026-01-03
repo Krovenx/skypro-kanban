@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
@@ -10,95 +10,20 @@ import PopBrowse from "./Components/Popups/PopBrowse/PopBrowse";
 import Wrapper from "./Components/Wrapper/Wrapper";
 
 function App() {
+  const [popUser, setPopUser] = useState(false);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
   return (
     <Wrapper>
       <PopExit />
       <PopNew />
       <PopBrowse />
-      <Header />
-
-      <Main>
-        <Column title="Без статуса">
-          <Card
-            themeColor="_orange"
-            themeName="Web Design"
-            title="Название задачи"
-            date="30.10.23"
-          />
-          <Card
-            themeColor="_green"
-            themeName="Research"
-            title="Название задачи"
-            date="30.10.23"
-          />
-          <Card
-            themeColor="_orange"
-            themeName="Web Design"
-            title="Название задачи"
-            date="30.10.23"
-          />
-          <Card
-            themeColor="_purple"
-            themeName="Copywriting"
-            title="Название задачи"
-            date="30.10.23"
-          />
-          <Card
-            themeColor="_orange"
-            themeName="Web Design"
-            title="Название задачи"
-            date="30.10.23"
-          />
-        </Column>
-
-        <Column title="Нужно сделать">
-          <Card
-            themeColor="_green"
-            themeName="Research"
-            title="Название задачи"
-            date="30.10.23"
-          />
-        </Column>
-
-        <Column title="В работе">
-          <Card
-            themeColor="_green"
-            themeName="Research"
-            title="Название задачи"
-            date="30.10.23"
-          />
-          <Card
-            themeColor="_purple"
-            themeName="Copywriting"
-            title="Название задачи"
-            date="30.10.23"
-          />
-          <Card
-            themeColor="_orange"
-            themeName="Web Design"
-            title="Название задачи"
-            date="30.10.23"
-          />
-        </Column>
-
-        <Column title="Тестирование">
-          <Card
-            themeColor="_green"
-            themeName="Research"
-            title="Название задачи"
-            date="30.10.23"
-          />
-        </Column>
-
-        <Column title="Готово">
-          <Card
-            themeColor="_green"
-            themeName="Research"
-            title="Название задачи"
-            date="30.10.23"
-          />
-        </Column>
-      </Main>
+      <Header popUser={popUser} setPopUser={setPopUser} />
+      <Main loading={loading}/>
     </Wrapper>
   );
 }

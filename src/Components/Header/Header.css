@@ -5,6 +5,7 @@
 ._hover02:hover,
 .header__user:hover {
   color: #33399b;
+  cursor: pointer;
 }
 
 ._hover02:hover::after,
@@ -49,8 +50,6 @@
   justify-content: center;
 }
 .header__btn-main-new {
-  width: 178px;
-  height: 30px;
   border-radius: 4px;
   background-color: #565eef;
   color: #ffffff;
@@ -86,7 +85,7 @@
   padding: 0;
 }
 .header__pop-user-set {
-  display: none;
+  display: block;
   position: absolute;
   top: 61px;
   right: 0;
