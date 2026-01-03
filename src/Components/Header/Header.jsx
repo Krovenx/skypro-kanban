@@ -1,6 +1,16 @@
 import React from "react";
 import "./PopUser.css";
 import "./Header.css";
+import "./Header.styled";
+import {
+  HeaderBtnMainNew,
+  SHeader,
+  Container,
+  HeaderBlock,
+  HeaderNav,
+  HeaderLogo,
+  Hover03,
+} from "./Header.styled";
 
 //////////////////////////////////////////////////////////
 
@@ -8,24 +18,26 @@ const Header = ({ popUser, setPopUser }) => {
   const openPop = () => {
     setPopUser(!popUser);
   };
+  
   return (
-    <header className="header">
-      <div className="container">
-        <div className="header__block">
-          <div className="header__logo _show _light">
+    <SHeader>
+      <Container>
+        <HeaderBlock>
+          <HeaderLogo>
             <a href="" target="_self">
               <img src="/images/logo.png" alt="logo" />
             </a>
-          </div>
-          <div className="header__logo _dark">
+          </HeaderLogo>
+          <HeaderLogo>
             <a href="" target="_self">
               <img src="/images/logo_dark.png" alt="logo" />
             </a>
-          </div>
-          <nav className="header__nav">
-            <button className="header__btn-main-new _hover01" id="btnMainNew">
+          </HeaderLogo>
+          <HeaderNav>
+            <HeaderBtnMainNew>
               <a href="#popNewCard">Создать новую задачу</a>
-            </button>
+            </HeaderBtnMainNew>
+
             <div className="header__user _hover02" onClick={openPop}>
               Ivan Ivanov
             </div>
@@ -46,14 +58,14 @@ const Header = ({ popUser, setPopUser }) => {
                 <p>Темная тема</p>
                 <input type="checkbox" className="checkbox" name="checkbox" />
               </div>
-              <button type="button" className="_hover03">
+              <Hover03 type="button">
                 <a href="#popExit">Выйти</a>
-              </button>
+              </Hover03>
             </div>
-          </nav>
-        </div>
-      </div>
-    </header>
+          </HeaderNav>
+        </HeaderBlock>
+      </Container>
+    </SHeader>
   );
 };
 

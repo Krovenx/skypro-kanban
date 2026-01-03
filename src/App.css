@@ -43,13 +43,6 @@ body {
   color: #000000;
 }
 
-.container {
-  max-width: 1260px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 30px;
-}
-
 .pop-user-set:target,
 .pop-exit:target,
 .pop-new-card:target,
@@ -191,9 +184,7 @@ body {
   display: none;
 }
 
-._dark {
-  display: none;
-}
+
 
 ._hover01:hover {
   background-color: #33399b;
