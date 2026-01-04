@@ -2,22 +2,21 @@ import React from "react";
 import "./Column.css";
 import { cardList } from "../../data";
 import Card from "../Card/Card";
-import CardLoader from "../Loadering/CardLoader";
-
+import { MainColumn, ColumnTitle, SCard } from "./Column.styled";
 const Column = ({ title }) => {
   return (
-    <div className="main__column">
-      <div className="column__title">
+    <MainColumn>
+      <ColumnTitle>
         <p>{title}</p>
-      </div>
-      <div className="card">
+      </ColumnTitle>
+      <SCard>
         {cardList
           .filter((item) => item.status === title)
           .map((item) => (
             <Card item={item} key={item.id} />
           ))}
-      </div>
-    </div>
+      </SCard>
+    </MainColumn>
   );
 };
 

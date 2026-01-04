@@ -1,16 +1,17 @@
 import Loader from "./Loader";
-
 import React from "react";
 import "./Loader.css";
+import { SCardLoader, LoaderWrapper } from "./CardLoadering.styled";
+
 const CardLoader = () => {
   return (
-    <div className="card-loader">
-      <div className="loader-wrapper">
+    <SCardLoader>
+      <LoaderWrapper>
         <Loader />
         <Loader width={164} />
-      </div>
+      </LoaderWrapper>
       <Loader width={81} height={15} />
-    </div>
+    </SCardLoader>
   );
 };
 

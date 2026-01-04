@@ -56,6 +56,14 @@ export const HeaderLogo = styled.div`
   }
 `;
 
+export const HeaderNav = styled.nav`
+  max-width: 290px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const HeaderBtnMainNew = styled.button`
   border-radius: 4px;
   background-color: #565eef;
@@ -65,16 +73,21 @@ export const HeaderBtnMainNew = styled.button`
   line-height: 1;
   font-weight: 500;
   margin-right: 20px;
-  padding: 5px;
+  padding: 7px;
+  a {
+    color: #ffffff;
+  }
   &:hover {
     background-color: #33399b;
   }
 `;
 
-export const HeaderNav = styled.nav`
-  max-width: 290px;
-  padding: 0;
+export const HeaderUser = styled.div`
+  height: 20px;
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-`;
+  font-size: 14px;
+  line-height: 20px;
+  color: #565eef;`

@@ -1,21 +1,4 @@
 
-.header__logo img {
-  width: 85px;
-}
-
-.header__btn-main-new {
-  border-radius: 4px;
-  background-color: #565eef;
-  color: #ffffff;
-  border: none;
-  font-size: 14px;
-  line-height: 1;
-  font-weight: 500;
-  margin-right: 20px;
-}
-.header__btn-main-new a {
-  color: #ffffff;
-}
 .header__user {
   height: 20px;
   display: flex;
