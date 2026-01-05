@@ -10,6 +10,7 @@ import {
   HeaderNav,
   HeaderLogo,
   Hover03,
+  HeaderUser,
 } from "./Header.styled";
 
 //////////////////////////////////////////////////////////
@@ -18,7 +19,7 @@ const Header = ({ popUser, setPopUser }) => {
   const openPop = () => {
     setPopUser(!popUser);
   };
-  
+
   return (
     <SHeader>
       <Container>
@@ -38,9 +39,9 @@ const Header = ({ popUser, setPopUser }) => {
               <a href="#popNewCard">Создать новую задачу</a>
             </HeaderBtnMainNew>
 
-            <div className="header__user _hover02" onClick={openPop}>
+            <HeaderUser onClick={openPop}>
               Ivan Ivanov
-            </div>
+            </HeaderUser>
             <div
               className={`header__pop-user-set pop-user-set ${
                 popUser ? "active" : ""

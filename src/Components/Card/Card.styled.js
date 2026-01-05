@@ -35,19 +35,41 @@ export const CardGroup = styled.div`
   justify-content: space-between;
 `;
 
-/////////////////////// не подключил
+
 export const CardTheme = styled.div`
   width: auto;
   height: 20px;
   padding: 5px 14px;
   border-radius: 18px;
-
-  & p {
-    font-size: 10px;
-    font-weight: 600;
-    line-height: 10px;
-  }
+/////////////////////// почему то не работает
+  background-color: ${({ background }) =>
+    background === "_orange"
+      ? "#FFE4C2"
+      : background === "_green"
+      ? "#B4FDD1"
+      : background === "_purple"
+      ? "#E9D4FF"
+      : background === "_gray"
+      ? "#94A6BE"
+      : "#F0F0F0"};
 `;
+export const CardText = styled.p`
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 10px;
+  
+   color: ${({ color }) =>
+    color === "_orange"
+      ? "#FF6D00"
+      : color === "_green"
+      ? "#06B16E"
+      : color === "_purple"
+      ? "#9A48F1"
+      : color === "_gray"
+      ? "#FFFFFF"
+      : "#666666"};
+`;
+
 export const CardBtn = styled.div`
   width: 24px;
   height: 24px;
@@ -62,7 +84,7 @@ export const CardBtn = styled.div`
     background-color: #94a6be;
   }
 `;
-//////////// не подключил
+///////////////////////////////
 export const CardTitle = styled.h3`
   font-size: 14px;
   font-weight: 600;
@@ -72,6 +94,7 @@ export const CardTitle = styled.h3`
   &.line-through {
     text-decoration: line-through;
   }
+  
 `;
 
 export const CardContent = styled.div`

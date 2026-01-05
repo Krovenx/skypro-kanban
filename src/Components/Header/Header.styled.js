@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Hover01 = styled.button``;
+
 export const Hover02 = styled.div`
   &:hover {
     color: #33399b;
@@ -82,7 +83,7 @@ export const HeaderBtnMainNew = styled.button`
   }
 `;
 
-export const HeaderUser = styled.div`
+export const HeaderUser = styled(Hover02)`
   height: 20px;
   display: flex;
   flex-wrap: nowrap;
@@ -90,4 +91,19 @@ export const HeaderUser = styled.div`
   justify-content: center;
   font-size: 14px;
   line-height: 20px;
-  color: #565eef;`
+  color: #565eef;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 1px;
+    border-left: 1.9px solid #565eef;
+    border-bottom: 1.9px solid #565eef;
+    transform: rotate(-45deg);
+    margin: -6px 0 0 5px;
+    padding: 0;
+  }
+`;
+

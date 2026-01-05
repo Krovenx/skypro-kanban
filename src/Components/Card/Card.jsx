@@ -8,15 +8,17 @@ import {
   CardBtn,
   CardContent,
   CartDate,
+  CardText,
+  CardTitle
 } from "./Card.styled";
 const Card = ({ item }) => {
   return (
     <CardItem>
       <CardContainer>
         <CardGroup>
-          <div className={`card__theme ${item.themeColor}`}>
-            <p className={item.themeColor}>{item.themeName}</p>
-          </div>
+          <CardTheme background={item.themColor}>
+            <CardText color={item.themeColor}>{item.themeName}</CardText>
+          </CardTheme>
           <a href="#popBrowse" target="_self">
             <CardBtn>
               <div></div>
@@ -27,11 +29,12 @@ const Card = ({ item }) => {
         </CardGroup>
         <CardContent>
           <a href="" target="_blank">
-            <h3
+          {/* тут ступор */}
+            <CardTitle
               className={`card__title ${item.id === 11 ? "line-through" : ""}`}
             >
               {item.title}
-            </h3>
+            </CardTitle>
           </a>
           <CartDate>
             <svg
