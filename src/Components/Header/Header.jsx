@@ -47,7 +47,6 @@ const Header = ({ popUser, setPopUser }) => {
                 popUser ? "active" : ""
               }`}
               id="user-set-target"
-              onClick={openPop}
               style={{
                 opacity: popUser ? 1 : 0,
                 visibility: popUser ? "visible" : "hidden",
