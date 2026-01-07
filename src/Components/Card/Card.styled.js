@@ -1,5 +1,17 @@
 import styled, { keyframes } from "styled-components";
-import { SCard } from "../Column/Column.styled";
+
+import { StyleContainer } from "../Column/Column.styled";
+
+export const CardContainer = styled(StyleContainer)`
+  height: 130px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: stretch;
+  padding: 15px 13px 19px;
+`;
 const rotate = keyframes`
   0% {
     height: 0;
@@ -18,17 +30,6 @@ export const CardItem = styled.div`
   animation-timing-function: linear;
 `;
 
-export const CardContainer = styled(SCard)`
-  height: 130px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: stretch;
-  padding: 15px 13px 19px;
-`;
-
 export const CardGroup = styled.div`
   width: 100%;
   height: 20px;
@@ -43,7 +44,6 @@ export const CardTheme = styled.div`
   height: 20px;
   padding: 5px 14px;
   border-radius: 18px;
-  /////////////////////// почему то не работает
   background-color: ${({ background }) =>
     background === "_orange"
       ? "#FFE4C2"
@@ -93,9 +93,9 @@ export const CardTitle = styled.h3`
   line-height: 18px;
   color: #000000;
   margin-bottom: 10px;
-  &.line-through {
-    text-decoration: line-through;
-  }
+
+  text-decoration: ${({ decoration }) =>
+    decoration ? "line-through" : "none"};
 `;
 
 export const CardContent = styled.div`

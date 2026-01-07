@@ -18,7 +18,7 @@ export const ColumnTitle = styled.div`
   }
 `;
 ////////////////////////// такой же стиль находиться в Card.styles
-export const SCard = styled.div`
+export const StyleContainer = styled.div`
   width: 100%;
   display: block;
   position: relative;

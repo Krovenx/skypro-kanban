@@ -8,7 +8,7 @@ import {
   CardContent,
   CartDate,
   CardText,
-  CardTitle
+  CardTitle,
 } from "./Card.styled";
 const Card = ({ item }) => {
   return (
@@ -28,11 +28,7 @@ const Card = ({ item }) => {
         </CardGroup>
         <CardContent>
           <a href="" target="_blank">
-            <CardTitle
-              className={`${item.id === 11 ? "line-through" : ""}`}
-            >
-              {item.title}
-            </CardTitle>
+            <CardTitle decoration={item.id === 11}>{item.title}</CardTitle>
           </a>
           <CartDate>
             <svg
