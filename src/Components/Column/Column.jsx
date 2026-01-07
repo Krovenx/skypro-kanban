@@ -1,5 +1,4 @@
 import React from "react";
-import "./Column.css";
 import { cardList } from "../../data";
 import Card from "../Card/Card";
 import { MainColumn, ColumnTitle, SCard } from "./Column.styled";

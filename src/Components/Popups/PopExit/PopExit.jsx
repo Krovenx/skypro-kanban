@@ -1,6 +1,6 @@
 import React from "react";
 import "./PopExit.css";
-
+import "../CommonPop.css";
 const PopExit = () => {
   return (
     <div className="pop-exit" id="popExit">

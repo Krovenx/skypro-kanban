@@ -1,5 +1,4 @@
 import React from "react";
-import "./Card.css";
 import {
   CardItem,
   CardContainer,
@@ -16,7 +15,7 @@ const Card = ({ item }) => {
     <CardItem>
       <CardContainer>
         <CardGroup>
-          <CardTheme background={item.themColor}>
+          <CardTheme background={item.themeColor}>
             <CardText color={item.themeColor}>{item.themeName}</CardText>
           </CardTheme>
           <a href="#popBrowse" target="_self">
@@ -29,9 +28,8 @@ const Card = ({ item }) => {
         </CardGroup>
         <CardContent>
           <a href="" target="_blank">
-          {/* тут ступор */}
             <CardTitle
-              className={`card__title ${item.id === 11 ? "line-through" : ""}`}
+              className={`${item.id === 11 ? "line-through" : ""}`}
             >
               {item.title}
             </CardTitle>

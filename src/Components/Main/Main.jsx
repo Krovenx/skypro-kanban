@@ -1,5 +1,4 @@
 import React from "react";
-import "./Main.css";
 import Column from "../Column/Column";
 import { LoadingText } from "../Loadering/CardLoadering.styled";
 import { SMain, MainBlock, MainContent } from "./Main.styled";

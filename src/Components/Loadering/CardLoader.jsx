@@ -1,6 +1,5 @@
 import Loader from "./Loader";
 import React from "react";
-import "./Loader.css";
 import { SCardLoader, LoaderWrapper } from "./CardLoadering.styled";
 
 const CardLoader = () => {

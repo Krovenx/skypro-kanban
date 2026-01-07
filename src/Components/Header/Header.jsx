@@ -1,6 +1,4 @@
 import React from "react";
-import "./PopUser.css";
-import "./Header.css";
 import "./Header.styled";
 import {
   HeaderBtnMainNew,
@@ -11,9 +9,8 @@ import {
   HeaderLogo,
   Hover03,
   HeaderUser,
+  HeaderPopUserSet,
 } from "./Header.styled";
-
-//////////////////////////////////////////////////////////
 
 const Header = ({ popUser, setPopUser }) => {
   const openPop = () => {
@@ -39,10 +36,8 @@ const Header = ({ popUser, setPopUser }) => {
               <a href="#popNewCard">Создать новую задачу</a>
             </HeaderBtnMainNew>
 
-            <HeaderUser onClick={openPop}>
-              Ivan Ivanov
-            </HeaderUser>
-            <div
+            <HeaderUser onClick={openPop}>Ivan Ivanov</HeaderUser>
+            <HeaderPopUserSet
               className={`header__pop-user-set pop-user-set ${
                 popUser ? "active" : ""
               }`}
@@ -61,7 +56,7 @@ const Header = ({ popUser, setPopUser }) => {
               <Hover03 type="button">
                 <a href="#popExit">Выйти</a>
               </Hover03>
-            </div>
+            </HeaderPopUserSet>
           </HeaderNav>
         </HeaderBlock>
       </Container>
