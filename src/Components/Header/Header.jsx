@@ -37,16 +37,7 @@ const Header = ({ popUser, setPopUser }) => {
             </HeaderBtnMainNew>
 
             <HeaderUser onClick={openPop}>Ivan Ivanov</HeaderUser>
-            <HeaderPopUserSet
-              className={`header__pop-user-set pop-user-set ${
-                popUser ? "active" : ""
-              }`}
-              id="user-set-target"
-              style={{
-                opacity: popUser ? 1 : 0,
-                visibility: popUser ? "visible" : "hidden",
-              }}
-            >
+            <HeaderPopUserSet $OpenActive={popUser} id="user-set-target">
               <p className="pop-user-set__name">Ivan Ivanov</p>
               <p className="pop-user-set__mail">Ivan Ivanov@gmail.com</p>
               <div className="pop-user-set__theme">

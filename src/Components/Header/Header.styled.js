@@ -23,6 +23,9 @@ export const Hover03 = styled.button`
   &:hover a {
     color: #ffffff;
   }
+  & a {
+    color: blue;
+  }
 `;
 
 export const SHeader = styled.div`
@@ -126,4 +129,7 @@ export const HeaderPopUserSet = styled(PopUserSet)`
   padding: 34px;
   text-align: center;
   z-index: 2;
+
+  opacity: ${({ $OpenActive }) => ($OpenActive ? 1 : 0)};
+  visibility: ${({ $OpenActive }) => ($OpenActive ? "visible" : "hidden")};
 `;

@@ -15,8 +15,8 @@ const Card = ({ item }) => {
     <CardItem>
       <CardContainer>
         <CardGroup>
-          <CardTheme background={item.themeColor}>
-            <CardText color={item.themeColor}>{item.themeName}</CardText>
+          <CardTheme $background={item.themeColor}>
+            <CardText $color={item.themeColor}>{item.themeName}</CardText>
           </CardTheme>
           <a href="#popBrowse" target="_self">
             <CardBtn>
@@ -28,7 +28,7 @@ const Card = ({ item }) => {
         </CardGroup>
         <CardContent>
           <a href="" target="_blank">
-            <CardTitle decoration={item.id === 11}>{item.title}</CardTitle>
+            <CardTitle $decoration={item.id === 11}>{item.title}</CardTitle>
           </a>
           <CartDate>
             <svg

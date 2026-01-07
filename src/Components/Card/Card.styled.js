@@ -44,14 +44,14 @@ export const CardTheme = styled.div`
   height: 20px;
   padding: 5px 14px;
   border-radius: 18px;
-  background-color: ${({ background }) =>
-    background === "_orange"
+  background-color: ${({ $background }) =>
+    $background === "_orange"
       ? "#FFE4C2"
-      : background === "_green"
+      : $background === "_green"
       ? "#B4FDD1"
-      : background === "_purple"
+      : $background === "_purple"
       ? "#E9D4FF"
-      : background === "_gray"
+      : $background === "_gray"
       ? "#94A6BE"
       : "#F0F0F0"};
 `;
@@ -60,14 +60,14 @@ export const CardText = styled.p`
   font-weight: 600;
   line-height: 10px;
 
-  color: ${({ color }) =>
-    color === "_orange"
+  color: ${({ $color }) =>
+    $color === "_orange"
       ? "#FF6D00"
-      : color === "_green"
+      : $color === "_green"
       ? "#06B16E"
-      : color === "_purple"
+      : $color === "_purple"
       ? "#9A48F1"
-      : color === "_gray"
+      : $color === "_gray"
       ? "#FFFFFF"
       : "#666666"};
 `;
@@ -94,8 +94,8 @@ export const CardTitle = styled.h3`
   color: #000000;
   margin-bottom: 10px;
 
-  text-decoration: ${({ decoration }) =>
-    decoration ? "line-through" : "none"};
+  text-decoration: ${({ $decoration }) =>
+    $decoration ? "line-through" : "none"};
 `;
 
 export const CardContent = styled.div`

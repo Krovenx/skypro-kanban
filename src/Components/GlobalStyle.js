@@ -22,6 +22,12 @@ button,
 ._btn {
   cursor: pointer;
   outline: none;
+  padding:6px 12px;
+  border:1px solid blue;
+  border-radius:4px;
+  font-size:14px;
+  font-weight: 600;
+  background-color:#fff;
 }
 
 ul li {
