@@ -70,7 +70,7 @@ export const Calendar = () => {
               <SCalendarCell>6</SCalendarCell>
               <SCalendarCell>7</SCalendarCell>
               <SCalendarCell $current>8</SCalendarCell>
-              <SCalendarCell _weekend $activeDay>
+              <SCalendarCell $weekend $activeDay>
                 9
               </SCalendarCell>
               <SCalendarCell $weekend>10</SCalendarCell>
@@ -94,12 +94,11 @@ export const Calendar = () => {
               <SCalendarCell>28</SCalendarCell>
               <SCalendarCell>29</SCalendarCell>
               <SCalendarCell $weekend>30</SCalendarCell>
-              <SCalendarCell $othermonth $weekend>
+              <SCalendarCell $otherMonth $weekend>
                 1
               </SCalendarCell>
             </SCalendarCells>
           </SCalendarContent>
-
           <input type="hidden" id="datepick_value" value="08.09.2023" />
           <SCalendarPeriod>
             <SCalendarP>

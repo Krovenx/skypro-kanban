@@ -9,12 +9,6 @@ export const SCalendarTitle = styled.p`
   margin-bottom: 14px;
   padding: 0 7px;
 `;
-const Subttl = styled.p`
-  color: #000;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
-`;
 
 export const SCalendarP = styled.p`
   color: #94a6be;
@@ -110,16 +104,6 @@ export const SCalendarCell = styled.div`
     background-color: #eaeef6;
   }
 `;
-const CellDay = styled.div`
-  &:hover {
-  }
-`;
-
-const OtherMonth = styled.div``;
-
-const ActiveDay = styled.div``;
-
-const Current = styled.div``;
 
 export const SCalendarNav = styled.div`
   width: 100%;
