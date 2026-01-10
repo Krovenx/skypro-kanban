@@ -1,5 +1,8 @@
 import React from "react";
 import "./PopNew.css";
+import "../CommonPop.css";
+import "./PopForm.css";
+import "./PopUser.css";
 const PopNew = () => {
   return (
     <div className="pop-new-card" id="popNewCard">

@@ -63,3 +63,16 @@
   display: block;
   margin-bottom: 20px;
 }
+
+.categories__themes {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.categories {
+  margin-bottom: 20px;
+}
+
+

@@ -1,27 +1,36 @@
 import React from "react";
-import "./Card.css";
-
-const Card = ({ item}) => {
+import {
+  CardItem,
+  CardContainer,
+  CardGroup,
+  CardTheme,
+  CardBtn,
+  CardContent,
+  CartDate,
+  CardText,
+  CardTitle,
+} from "./Card.styled";
+const Card = ({ item }) => {
   return (
-    <div className="card__item">
-      <div className="card__card card">
-        <div className="card__group">
-          <div className={`card__theme ${item.themeColor}`}>
-            <p className={item.themeColor}>{item.themeName}</p>
-          </div>
+    <CardItem>
+      <CardContainer>
+        <CardGroup>
+          <CardTheme $background={item.themeColor}>
+            <CardText $color={item.themeColor}>{item.themeName}</CardText>
+          </CardTheme>
           <a href="#popBrowse" target="_self">
-            <div className="card__btn">
+            <CardBtn>
               <div></div>
               <div></div>
               <div></div>
-            </div>
+            </CardBtn>
           </a>
-        </div>
-        <div className="card__content">
+        </CardGroup>
+        <CardContent>
           <a href="" target="_blank">
-            <h3 className={`card__title ${item.id === 11 ? 'line-through' : ''}`}>{item.title}</h3>
+            <CardTitle $decoration={item.id === 11}>{item.title}</CardTitle>
           </a>
-          <div className="card__date">
+          <CartDate>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="13"
@@ -51,10 +60,10 @@ const Card = ({ item}) => {
               </defs>
             </svg>
             <p>{item.date}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+          </CartDate>
+        </CardContent>
+      </CardContainer>
+    </CardItem>
   );
 };
 
