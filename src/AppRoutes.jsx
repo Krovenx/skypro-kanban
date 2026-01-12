@@ -5,7 +5,8 @@ import { GlobalStyle } from "./Components/GlobalStyle";
 import MainPage from "./Components/Pages/Main";
 import SignInPage from "./Components/Pages/SignIn";
 import SignUpPage from "./Components/Pages/SignUp";
-import WordPage from "./Components/Pages/Word";
+import NewWordPage from "./Components/Pages/Word";
+import WordPage from "./Components/Pages/WordAdd";
 
 function AppRoutes() {
   const [loading, setLoading] = useState(true);
@@ -29,19 +30,14 @@ function AppRoutes() {
               setPopUser={setPopUser}
             />
           }
-        />
-        {/* Страница входа */}
-        <Route path="/SignIn" element={<SignInPage />} />
-        {/* Страница регистрации */}
-        <Route path="/SigUp" element={<SignUpPage />} />
-        {/* Добавление задач */}
-        {/* <Route path="" element={<WordAdd />} /> */}
-        {/* Редактирование и просмотр задачи */}
-         <Route path="/Card/:id" element={<WordPage />} /> 
-        {/* Модальное окно выхода */}
-        {/* <Route path="" element={<WordModalExit />} /> */}
-        {/* Страница 404 */}
-        {/* <Route path="" element={<ErrorPage />} /> */}
+        >
+          {/* Добавление новой задачи */}
+          <Route path="card/add" element={<NewWordPage />} />
+          {/* Модальное окно */}
+          <Route path="card/:id" element={<WordPage />} />
+        
+        </Route>
+
       </Routes>
     </Router>
   );

@@ -1,8 +1,8 @@
 import React from "react";
-import WordModal from "./WordModal";
+import PopNew from "../Popups/PopNew/PopNew";
 
-const WordPage = () => {
-  return <WordModal />;
+const NewWordPage = () => {
+  return <PopNew />;
 };
 
-export default WordPage;
+export default NewWordPage;

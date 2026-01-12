@@ -3,14 +3,23 @@ import "./PopNew.css";
 import "../CommonPop.css";
 import "./PopForm.css";
 import "./PopUser.css";
+import { useNavigate } from "react-router-dom";
+
 const PopNew = () => {
+  const navigate = useNavigate();
+
+  const handleClose = (e) => {
+    e.preventDefault();
+    navigate(-1);
+  };
+
   return (
     <div className="pop-new-card" id="popNewCard">
       <div className="pop-new-card__container">
         <div className="pop-new-card__block">
           <div className="pop-new-card__content">
             <h3 className="pop-new-card__ttl">Создание задачи</h3>
-            <a href="#" className="pop-new-card__close">
+            <a href="#" className="pop-new-card__close" onClick={handleClose}>
               &#10006;
             </a>
             <div className="pop-new-card__wrap">

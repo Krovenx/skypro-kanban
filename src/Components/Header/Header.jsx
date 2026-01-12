@@ -11,12 +11,17 @@ import {
   HeaderUser,
   HeaderPopUserSet,
 } from "./Header.styled";
+import { useNavigate } from "react-router-dom";
 
 const Header = ({ popUser, setPopUser }) => {
   const openPop = () => {
     setPopUser(!popUser);
   };
-
+  const navigate = useNavigate();
+  const handleAddTask = (e) => {
+    e.preventDefault();
+    navigate("/card/add");
+  };
   return (
     <SHeader>
       <Container>
@@ -33,7 +38,9 @@ const Header = ({ popUser, setPopUser }) => {
           </HeaderLogo>
           <HeaderNav>
             <HeaderBtnMainNew>
-              <a href="#popNewCard">Создать новую задачу</a>
+              <a href="card/add" onClick={handleAddTask}>
+                Создать новую задачу
+              </a>
             </HeaderBtnMainNew>
 
             <HeaderUser onClick={openPop}>Ivan Ivanov</HeaderUser>
