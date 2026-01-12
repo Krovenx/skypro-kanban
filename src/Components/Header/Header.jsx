@@ -17,11 +17,17 @@ const Header = ({ popUser, setPopUser }) => {
   const openPop = () => {
     setPopUser(!popUser);
   };
+
   const navigate = useNavigate();
   const handleAddTask = (e) => {
     e.preventDefault();
     navigate("/card/add");
   };
+
+   const handlePop = (e) => {
+      e.preventDefault();
+      navigate("/pop/exit");
+    };
   return (
     <SHeader>
       <Container>
@@ -51,8 +57,8 @@ const Header = ({ popUser, setPopUser }) => {
                 <p>Темная тема</p>
                 <input type="checkbox" className="checkbox" name="checkbox" />
               </div>
-              <Hover03 type="button">
-                <a href="#popExit">Выйти</a>
+              <Hover03 onClick={handlePop}  type="button">
+                <a href="/pop/exit">Выйти</a>
               </Hover03>
             </HeaderPopUserSet>
           </HeaderNav>

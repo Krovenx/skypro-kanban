@@ -6,7 +6,7 @@ import MainPage from "./Components/Pages/Main";
 import SignInPage from "./Components/Pages/SignIn";
 import SignUpPage from "./Components/Pages/SignUp";
 import NewWordPage from "./Components/Pages/Word";
-import WordPage from "./Components/Pages/WordAdd";
+import WordExit from "./Components/Pages/WordAdd";
 
 function AppRoutes() {
   const [loading, setLoading] = useState(true);
@@ -34,10 +34,8 @@ function AppRoutes() {
           {/* Добавление новой задачи */}
           <Route path="card/add" element={<NewWordPage />} />
           {/* Модальное окно */}
-          <Route path="card/:id" element={<WordPage />} />
-        
+          <Route path="/pop/exit" element={<WordExit />} />
         </Route>
-
       </Routes>
     </Router>
   );

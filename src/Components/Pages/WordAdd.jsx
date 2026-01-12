@@ -1,8 +1,7 @@
-import React from "react";
-import Card from "../Card/Card";
+import PopExit from "../Popups/PopExit/PopExit";
 
-const WordPage = () => {
-  return <Card />;
+const WordExit = () => {
+  return <PopExit />;
 };
 
-export default WordPage;
+export default WordExit;

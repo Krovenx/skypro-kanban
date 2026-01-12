@@ -9,7 +9,6 @@ const MainPage = ({ loading, popUser, setPopUser }) => {
   return (
     <>
       <Wrapper>
-        <PopExit />
         <PopBrowse />
         <Header popUser={popUser} setPopUser={setPopUser} />
         <Main loading={loading} />

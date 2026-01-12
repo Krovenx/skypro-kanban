@@ -1,7 +1,14 @@
 import React from "react";
 import "./PopExit.css";
 import "../CommonPop.css";
+import { useNavigate } from "react-router-dom";
+
 const PopExit = () => {
+  const navigate = useNavigate();
+  const HadleClose = (e) => {
+    e.preventDefault();
+    navigate(-1);
+  };
   return (
     <div className="pop-exit" id="popExit">
       <div className="pop-exit__container">
@@ -15,7 +22,9 @@ const PopExit = () => {
                 <a href="modal/signin.html">Да, выйти</a>
               </button>
               <button className="pop-exit__exit-no _hover03" id="exitNo">
-                <a href="main.html">Нет, остаться</a>
+                <a href="" onClick={HadleClose}>
+                  Нет, остаться
+                </a>
               </button>
             </div>
           </form>
