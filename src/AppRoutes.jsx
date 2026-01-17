@@ -7,14 +7,14 @@ import SignInPage from "./Components/Pages/SignIn";
 import SignUpPage from "./Components/Pages/SignUp";
 import NewWordPage from "./Components/Pages/Word";
 import WordExit from "./Components/Pages/WordAdd";
-
+import WordReview from "./Components/Pages/WordReview";
 function AppRoutes() {
   const [loading, setLoading] = useState(true);
   const [popUser, setPopUser] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 500);
   }, []);
 
   return (
@@ -35,6 +35,8 @@ function AppRoutes() {
           <Route path="card/add" element={<NewWordPage />} />
           {/* Модальное окно */}
           <Route path="/pop/exit" element={<WordExit />} />
+          {/*  просмотр карточек и редактирование задач*/}
+          <Route path="/card/:id" element={<WordReview />} />
         </Route>
       </Routes>
     </Router>
