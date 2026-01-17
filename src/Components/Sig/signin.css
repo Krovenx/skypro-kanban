@@ -92,9 +92,14 @@ a {
   align-items: center;
   justify-content: center;
 }
+
+
+////////////////////////
 .modal__form-login input:first-child {
   margin-bottom: 7px;
 }
+
+
 .modal__input {
   width: 100%;
   min-width: 100%;
