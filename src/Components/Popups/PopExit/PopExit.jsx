@@ -9,6 +9,10 @@ const PopExit = () => {
     e.preventDefault();
     navigate(-1);
   };
+  const HadleExit = (e) => {
+    e.preventDefault();
+    navigate("/sign-in");
+  };
   return (
     <div className="pop-exit" id="popExit">
       <div className="pop-exit__container">
@@ -19,7 +23,9 @@ const PopExit = () => {
           <form className="pop-exit__form" id="formExit" action="#">
             <div className="pop-exit__form-group">
               <button className="pop-exit__exit-yes _hover01" id="exitYes">
-                <a href="/">Да, выйти</a>
+                <a href="" onClick={HadleExit}>
+                  Да, выйти
+                </a>
               </button>
               <button className="pop-exit__exit-no _hover03" id="exitNo">
                 <a href="" onClick={HadleClose}>

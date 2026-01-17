@@ -1,9 +1,9 @@
 import React from "react";
-import SignIn from "../Sig/SignIn";
-import AuthForm from "../AuthForm/AuthForm";
+import SignIn from "../Sign/SignIn";
 
-const SignInPage = () => {
-  return <AuthForm SignUp={false} />;
+
+const SignInPage = ({ setIsAuth }) => {
+  return <SignIn setIsAuth={setIsAuth} />;
 };
 
 export default SignInPage;
