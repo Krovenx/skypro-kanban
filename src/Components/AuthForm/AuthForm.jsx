@@ -18,7 +18,7 @@ const AuthForm = ({ isSignUp, setIsAuth }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsAuth(true);
-    navigate("/main");
+    navigate("/");
   };
 
   const handleReg = (e) => {

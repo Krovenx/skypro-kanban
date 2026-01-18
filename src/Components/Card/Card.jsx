@@ -16,7 +16,7 @@ const Card = ({ item }) => {
   const navigate = useNavigate();
   const OpenCard = (e) => {
     e.preventDefault();
-    navigate(`/main/card/${item.id}`);
+    navigate(`/card/${item.id}`);
   };
   
   return (
@@ -35,7 +35,7 @@ const Card = ({ item }) => {
           </a>
         </CardGroup>
         <CardContent>
-          <a href={`/main/card/${item.id}`} target="_blank">
+          <a href={`/card/${item.id}`} target="_blank">
             <CardTitle $decoration={item.id === 11}>{item.title}</CardTitle>
           </a>
           <CartDate>

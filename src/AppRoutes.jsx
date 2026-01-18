@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { GlobalStyle } from "./Components/GlobalStyle";
 
 import MainPage from "./Components/Pages/Main";
 import SignInPage from "./Components/Pages/SignIn";
@@ -21,36 +20,34 @@ function AppRoutes() {
   }, []);
 
   return (
-    <Router>
-      <GlobalStyle />
-      <Routes>
-        <Route element={<PrivateRoute isAuth={isAuth} />}>
-          <Route
-            path="/main"
-            element={
-              <MainPage
-                loading={loading}
-                popUser={popUser}
-                setPopUser={setPopUser}
-              />
-            }
-          >
-            {/* Добавление новой задачи */}
-            <Route path="card/add" element={<NewWordPage />} />
-            {/* Модальное окно */}
-            <Route path="pop/exit" element={<WordExit />} />
-            {/*  просмотр карточек и редактирование задач*/}
-            <Route path="card/:id" element={<WordReview />} />
-          </Route>
+    <Routes>
+      {/* Вход */}
+      <Route path="/sign-in" element={<SignInPage setIsAuth={setIsAuth} />} />
+      {/* Регистрация */}
+      <Route path="/sign-up" element={<SignUpPage setIsAuth={setIsAuth} />} />
+      <Route element={<PrivateRoute isAuth={isAuth} />}>
+        <Route
+          path="/"
+          element={
+            <MainPage
+              loading={loading}
+              popUser={popUser}
+              setPopUser={setPopUser}
+            />
+          }
+        >
+          {/* Добавление новой задачи */}
+          <Route path="card/add" element={<NewWordPage />} />
+          {/* Модальное окно */}
+          <Route path="pop/exit" element={<WordExit />} />
+          {/*  просмотр карточек и редактирование задач*/}
+          <Route path="card/:id" element={<WordReview />} />
         </Route>
-        {/* Вход */}
-        <Route path="/sign-in" element={<SignInPage setIsAuth={setIsAuth} />} />
-        {/* Регистрация */}
-        <Route path="/sign-up" element={<SignUpPage setIsAuth={setIsAuth}/>} />
-        {/* Страница 404 */}
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </Router>
+      </Route>
+
+      {/* Страница 404 */}
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
   );
 }
 
