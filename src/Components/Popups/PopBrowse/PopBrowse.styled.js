@@ -338,8 +338,39 @@ export const CategoriesTheme = styled.div`
   border-radius: 24px;
   margin-right: 7px;
   opacity: 0.4;
+    background-color: ${({ $background }) =>
+    $background === "_orange"
+      ? "#FFE4C2"
+      : $background === "_green"
+      ? "#B4FDD1"
+      : $background === "_purple"
+      ? "#E9D4FF"
+      : $background === "_gray"
+      ? "#94A6BE"
+      : "#F0F0F0"};
   & p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    white-space: nowrap;
+    color: ${({ $color }) =>
+      $color === "_orange"
+        ? "#FF6D00"
+        : $color === "_green"
+          ? "#06B16E"
+          : $color === "_purple"
+            ? "#9A48F1"
+            : $color === "_gray"
+              ? "#FFFFFF"
+              : "#666666"};
   }
+`;
+
+export const CategoriesThemes = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
 `;
 export const ActiveCategory = styled.div`
   opacity: 1 !important;
