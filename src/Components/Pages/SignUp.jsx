@@ -1,8 +1,8 @@
 import React from "react";
-import AuthForm from "../AuthForm/AuthForm";
+import SignUp from "../Sign/SignUp";
 
 const SignUpPage = ({ setIsAuth }) => {
-  return <AuthForm isSignUp={true} setIsAuth={setIsAuth} />; // 👈 исправь: isSignUp вместо SignUp
+  return <SignUp setIsAuth={setIsAuth} />;
 };
 
 export default SignUpPage;
