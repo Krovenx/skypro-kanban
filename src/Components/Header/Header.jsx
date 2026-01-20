@@ -11,12 +11,29 @@ import {
   HeaderUser,
   HeaderPopUserSet,
 } from "./Header.styled";
+import { useNavigate } from "react-router-dom";
 
-const Header = ({ popUser, setPopUser }) => {
+const Header = ({ popUser, setPopUser, setIsAuth }) => {
   const openPop = () => {
     setPopUser(!popUser);
   };
 
+  const navigate = useNavigate();
+  const handleAddTask = (e) => {
+    e.preventDefault();
+    navigate("/card/add");
+  };
+
+  const handlePop = (e) => {
+    e.preventDefault();
+    navigate("pop/exit");
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    setIsAuth(false);
+    navigate("/sign-in");
+  };
   return (
     <SHeader>
       <Container>
@@ -33,7 +50,9 @@ const Header = ({ popUser, setPopUser }) => {
           </HeaderLogo>
           <HeaderNav>
             <HeaderBtnMainNew>
-              <a href="#popNewCard">Создать новую задачу</a>
+              <a href="card/add" onClick={handleAddTask}>
+                Создать новую задачу
+              </a>
             </HeaderBtnMainNew>
 
             <HeaderUser onClick={openPop}>Ivan Ivanov</HeaderUser>
@@ -44,8 +63,8 @@ const Header = ({ popUser, setPopUser }) => {
                 <p>Темная тема</p>
                 <input type="checkbox" className="checkbox" name="checkbox" />
               </div>
-              <Hover03 type="button">
-                <a href="#popExit">Выйти</a>
+              <Hover03 onClick={handlePop} type="button">
+                <a onClick={handleLogin}>Выйти</a>
               </Hover03>
             </HeaderPopUserSet>
           </HeaderNav>

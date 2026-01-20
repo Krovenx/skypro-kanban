@@ -10,7 +10,15 @@ import {
   CardText,
   CardTitle,
 } from "./Card.styled";
+import { useNavigate } from "react-router-dom";
+
 const Card = ({ item }) => {
+  const navigate = useNavigate();
+  const OpenCard = (e) => {
+    e.preventDefault();
+    navigate(`/card/${item.id}`);
+  };
+  
   return (
     <CardItem>
       <CardContainer>
@@ -18,7 +26,7 @@ const Card = ({ item }) => {
           <CardTheme $background={item.themeColor}>
             <CardText $color={item.themeColor}>{item.themeName}</CardText>
           </CardTheme>
-          <a href="#popBrowse" target="_self">
+          <a href="#popBrowse" onClick={OpenCard} target="_self">
             <CardBtn>
               <div></div>
               <div></div>
@@ -27,7 +35,7 @@ const Card = ({ item }) => {
           </a>
         </CardGroup>
         <CardContent>
-          <a href="" target="_blank">
+          <a href={`/card/${item.id}`} target="_blank">
             <CardTitle $decoration={item.id === 11}>{item.title}</CardTitle>
           </a>
           <CartDate>
